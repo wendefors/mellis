@@ -6,7 +6,7 @@ document.getElementById('spin-button').addEventListener('click', () => {
     setTimeout(() => {
         const selectedSnack = Math.floor(degrees / (360 / 5)) + 1;
         document.getElementById('snack-image').src = `images/mellis${selectedSnack}.jpg`;
-        document.getElementById('popup').classList.remove('hidden');
+        document.getElementById('popup').classList.remove('hidden'); //Test
     }, 2000);
 });
 
