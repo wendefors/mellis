@@ -1,5 +1,4 @@
 window.onload = () => {
-    // Återställ popup och hjul vid sidladdning
     document.getElementById('popup').classList.add('hidden');
     document.getElementById('wheel').style.transform = 'rotate(0deg)';
 };
@@ -10,8 +9,8 @@ document.getElementById('spin-button').addEventListener('click', () => {
     wheel.style.transform = `rotate(${degrees}deg)`;
 
     setTimeout(() => {
-        const selectedSnack = Math.floor(degrees / (360 / 5)) + 1;
-        document.getElementById('snack-image').src = `images/mellis${selectedSnack}.jpg`;
+        // Använd en placeholder-bild eller färgad ruta
+        document.getElementById('snack-image').src = 'placeholder.jpg';
         document.getElementById('popup').classList.remove('hidden');
     }, 2000);
 });
