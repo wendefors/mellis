@@ -1,3 +1,9 @@
+window.onload = () => {
+    // Återställ popup och hjul vid sidladdning
+    document.getElementById('popup').classList.add('hidden');
+    document.getElementById('wheel').style.transform = 'rotate(0deg)';
+};
+
 document.getElementById('spin-button').addEventListener('click', () => {
     const wheel = document.getElementById('wheel');
     const degrees = Math.floor(Math.random() * 360);
@@ -6,7 +12,7 @@ document.getElementById('spin-button').addEventListener('click', () => {
     setTimeout(() => {
         const selectedSnack = Math.floor(degrees / (360 / 5)) + 1;
         document.getElementById('snack-image').src = `images/mellis${selectedSnack}.jpg`;
-        document.getElementById('popup').classList.remove('hidden'); //Test
+        document.getElementById('popup').classList.remove('hidden');
     }, 2000);
 });
 
